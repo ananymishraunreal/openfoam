@@ -1,0 +1,20 @@
+apiVersion: foam-clutch/v1alpha1
+name: heavyBuoyant
+
+case:
+  path: .
+
+resources:
+  partition: normal
+  nodes: 2
+  tasksPerNode: 4
+  timeLimitMinutes: 60
+
+solver:
+  name: foamRun
+  arguments: []
+  checkpointSeconds: 600
+
+storage:
+  cacheDir: ./.foam-cache
+  runDir: ./.foam-runs

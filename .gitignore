@@ -1,0 +1,10 @@
+# Regenerable runner state: caches, per-job runs, databases, logs.
+.foam-cache/
+.foam-runs/
+*.db
+*.db-shm
+*.db-wal
+foam-clutch-runs.log
+log.*
+slurm-*.out
+slurm-*.err
