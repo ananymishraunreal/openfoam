@@ -8,3 +8,5 @@ foam-clutch-runs.log
 log.*
 slurm-*.out
 slurm-*.err
+
+.fake-commits/
