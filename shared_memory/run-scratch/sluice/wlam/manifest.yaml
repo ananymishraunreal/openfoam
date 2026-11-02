@@ -1,0 +1,18 @@
+apiVersion: sluice/v1alpha1
+name: wlam-artifact-run
+case:
+  path: /home/anany/shared_memory/run-scratch/sluice/wlam/m
+mesh:
+  strategy: custom
+  commands: ["./prep.sh"]
+resources:
+  partition: all
+  nodes: 1
+  tasksPerNode: 16
+  timeLimitMinutes: 30
+solver:
+  name: laserWireDEDFoam
+runtime:
+  foamBashrc: /home/anany/apps/OpenFOAM/OpenFOAM-v2506/etc/bashrc
+build:
+  source: /home/anany/apps/solvers/laser-wire-ded-project/solver/laserWireDEDFoam

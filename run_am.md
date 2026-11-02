@@ -49,8 +49,9 @@ Build LPBF's solver from its pinned source:
 git clone --branch OpenFoam_com_main \
   https://github.com/laserbeamfoam/LaserbeamFoam.git \
   "$HOME/apps/solvers/laserbeamFoam"
-source /path/to/OpenFOAM-v2506/etc/bashrc
 cd "$HOME/apps/solvers/laserbeamFoam"
+git checkout 3827840e600b6c15fe7eeb19d437c4f2a33b4c4f
+source /path/to/OpenFOAM-v2506/etc/bashrc
 ./Allwmake
 ```
 

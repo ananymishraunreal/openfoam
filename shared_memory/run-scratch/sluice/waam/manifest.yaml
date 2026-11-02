@@ -1,0 +1,18 @@
+apiVersion: sluice/v1alpha1
+name: waam-artifact-run
+case:
+  path: /home/anany/shared_memory/run-scratch/sluice/waam/m
+mesh:
+  strategy: custom
+  commands: ["./prep.sh"]
+resources:
+  partition: all
+  nodes: 1
+  tasksPerNode: 16
+  timeLimitMinutes: 30
+solver:
+  name: interFoam
+runtime:
+  foamBashrc: /home/anany/apps/OpenFOAM/src/OpenFOAM-10/etc/bashrc
+build:
+  source: /home/anany/apps/OpenFOAM/src/OpenFOAM-10/applications/solvers/multiphase/interFoam

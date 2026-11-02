@@ -1,0 +1,181 @@
+{
+ "project": "wlam",
+ "description": "WLAM surrogate: laser-wire DED case (laserWireDEDFoam) from an unlicensed upstream repo \u2014 internal testing only",
+ "sources": [
+  {
+   "repo": "https://github.com/dukyong414/laser-wire-ded-project",
+   "commit": "9fc736e99d61852a306b3f8e67022d368fc669dd",
+   "branch": "main",
+   "path": "cases/coarse_lof"
+  },
+  {
+   "repo": "https://github.com/dukyong414/laser-wire-ded-project",
+   "commit": "9fc736e99d61852a306b3f8e67022d368fc669dd",
+   "path": "README.md"
+  },
+  {
+   "repo": "https://github.com/dukyong414/laser-wire-ded-project",
+   "commit": "9fc736e99d61852a306b3f8e67022d368fc669dd",
+   "path": "START_HERE.md"
+  }
+ ],
+ "license": "NONE (upstream repo ships no LICENSE as of pinned commit)",
+ "license_note": "do NOT redistribute; local fixture use only",
+ "fetched_by": "bin/fetch_case.sh",
+ "policy": "raw fixture; Sluice auto-generates runtime files during manifest",
+ "fetched_at": "2026-10-29",
+ "total_bytes": 89487,
+ "n_files": 30,
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 2404,
+   "sha256": "f116eca138d119a056c2df9037ad8e4b80fe2cc1a2d86394cd6680c9be42bc0c"
+  },
+  {
+   "path": "case/0.orig/T",
+   "bytes": 1154,
+   "sha256": "73e526863dbe822795d9dc33a6e5c7a33f32ee92f55dca508fcdb55bb95d2c1f"
+  },
+  {
+   "path": "case/0.orig/U.orig",
+   "bytes": 1394,
+   "sha256": "019f4fbc35688687bf476fb6d41d3fcefd1597d74373d1e2950f9c8008d3118a"
+  },
+  {
+   "path": "case/0.orig/alpha.metal.orig",
+   "bytes": 1152,
+   "sha256": "252c12e6daff35320ae13b2c33f8f8bf19d2f77108fa81d6377d15db38ac4bfe"
+  },
+  {
+   "path": "case/0.orig/cWire.orig",
+   "bytes": 1146,
+   "sha256": "fccb9372b736e1408fb39bedb145e4c39fef6eac001526dde2528ec42bab5ce6"
+  },
+  {
+   "path": "case/0.orig/liquidFraction",
+   "bytes": 1032,
+   "sha256": "e867d011846a6d38b99f4e91126b8ff29343f6f2bfc001f8b15e89ce060350f1"
+  },
+  {
+   "path": "case/0.orig/meltHistory",
+   "bytes": 1152,
+   "sha256": "eb4550593bf48e6173cc6a9c6d9a443e762f4ea786c552f001d4a3e016e5116d"
+  },
+  {
+   "path": "case/0.orig/p_rgh",
+   "bytes": 1253,
+   "sha256": "3b94d187722d8aff18cb6211a8ad9e646b6ba15a9314bcfaab369a2d221de39c"
+  },
+  {
+   "path": "case/Allclean",
+   "bytes": 114,
+   "sha256": "3cac8f8a53981863e998f1bb5b6afa783e8fd361698f4aea32965c082468a700"
+  },
+  {
+   "path": "case/Allrun",
+   "bytes": 899,
+   "sha256": "57fb0f0e793a4fe86bfe8ead87f18d86df2e9fd9abf7d526c48e4fc13d1f7e05"
+  },
+  {
+   "path": "case/case.foam",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "case/case_params.json",
+   "bytes": 3898,
+   "sha256": "65de63ab49c4fb335ab1b68739422be4f3176834f4649297818996d4ef9fd76b"
+  },
+  {
+   "path": "case/checkMesh_tail.txt",
+   "bytes": 1737,
+   "sha256": "5b7952d804b25e229bc70a3d42bc3a5f70333702b72f7fabf91ae3e7edbcf438"
+  },
+  {
+   "path": "case/constant/dynamicMeshDict",
+   "bytes": 575,
+   "sha256": "d7a938dec30ea42136a83499de79d8fc8c971f95e355e1031fe6123c579b5c71"
+  },
+  {
+   "path": "case/constant/g",
+   "bytes": 613,
+   "sha256": "ba0067a55c1e1f67ec69961262336e1ef44c3e4587f9860aa44e1a697acc7a84"
+  },
+  {
+   "path": "case/constant/meltProperties",
+   "bytes": 3869,
+   "sha256": "4825918c34a2f68a7c2d2d8f00aa2317b999be1fee696ee1b9c64117a0c88d62"
+  },
+  {
+   "path": "case/constant/transportProperties",
+   "bytes": 945,
+   "sha256": "6e6d865c3f689b95d563425fe74883d744c76cc37e77f3163e9be095dddedb47"
+  },
+  {
+   "path": "case/constant/turbulenceProperties",
+   "bytes": 575,
+   "sha256": "c01b0684b2934bb890f52605bbf91a786bb49daf593beac8a715f4014c801c92"
+  },
+  {
+   "path": "case/run_log_head.txt",
+   "bytes": 4950,
+   "sha256": "9e0f68325d7035a3e8e8bc320bffe29530561e72f821af80a3bccfedf9297fc2"
+  },
+  {
+   "path": "case/run_log_tail.txt",
+   "bytes": 15998,
+   "sha256": "4b11ddb26d1b473e97bf58fb288a605e0d5fb7bc4348638b80ca20959ee5c2d0"
+  },
+  {
+   "path": "case/system/blockMeshDict",
+   "bytes": 2306,
+   "sha256": "a4f1db85e184b5b80c4e90d6f2d2e48536f6e89f242aefd5fa81d566d304a513"
+  },
+  {
+   "path": "case/system/controlDict",
+   "bytes": 1002,
+   "sha256": "c674fa21de55d39157c42082a2ec205f84e7821ceefd48b0e3944ba0df8e0f3d"
+  },
+  {
+   "path": "case/system/createPatchDict",
+   "bytes": 727,
+   "sha256": "c02d06b094b4e5f937d9b89a076e47f5a8b325861da152318cd647442319f32f"
+  },
+  {
+   "path": "case/system/decomposeParDict",
+   "bytes": 976,
+   "sha256": "93637e58ba5a8df4d4b3d0847fc5fc5773a443a8f138f24a6bc8e7e51f796c57"
+  },
+  {
+   "path": "case/system/fvSchemes",
+   "bytes": 1169,
+   "sha256": "34a88e26449d1057519b7aab40ed5336608056a91ce559fa1955a5c1dbc429d0"
+  },
+  {
+   "path": "case/system/fvSolution",
+   "bytes": 1625,
+   "sha256": "b216f2763c7ca8afe699b4a9e2acdd64d192387f42822710755dabbea7c58fac"
+  },
+  {
+   "path": "case/system/setFieldsDict",
+   "bytes": 1200,
+   "sha256": "b66ab9c02aa16cd61e106a7976a1cbb282c607308509d88f6bcaae404c853fa9"
+  },
+  {
+   "path": "case/system/topoSetDict",
+   "bytes": 929,
+   "sha256": "25cc203abcbfd230f0e31ea842f411b27fb08540584464e0d5e80f4504fc1091"
+  },
+  {
+   "path": "source/README.md",
+   "bytes": 28946,
+   "sha256": "a45d373631d5c4ecddef5146fefafd21b5914546fea9f4cd397f1cb0879e3129"
+  },
+  {
+   "path": "source/START_HERE.md",
+   "bytes": 5747,
+   "sha256": "f3e8e16654bf26ede4b418a1195e4b49f0cc067b8041cd88b02bfcf0d50e53f0"
+  }
+ ]
+}

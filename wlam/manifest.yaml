@@ -9,7 +9,9 @@ mesh:
     - topoSet
     - createPatch -overwrite
     - mkdir -p 0 && cp 0.orig/* 0/
-    - for f in 0/*.orig; do mv "$f" "${f%.orig}"; done
+    - mv 0/U.orig 0/U
+    - mv 0/alpha.metal.orig 0/alpha.metal
+    - mv 0/cWire.orig 0/cWire
     - setFields
 resources:
   partition: all
