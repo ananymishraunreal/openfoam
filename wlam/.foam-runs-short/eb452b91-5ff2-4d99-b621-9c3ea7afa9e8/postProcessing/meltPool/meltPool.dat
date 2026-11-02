@@ -1,0 +1,3 @@
+# time[s] poolLength[m] poolWidth[m] poolDepth[m] poolTopZ[m] Tmax[K] moltenVolume[m3] metalVolume[m3] laserIncident[W] laserAbsorbed[W] surfaceLoss[W] wireTipZ[m] beadHeight[m] beadWidth[m] deltaT[s] probeX[m] beadArea[m2] fusedArea[m2] penetration[m] dilutionGeom[-] dilutionComp[-] poolTailX[m] poolFrontX[m]
+2e-07 0 0 0 0 300 0 1.216383e-07 0.039999999 0.0168 9.9606797e-11 0.00021818182 -9.7886629e-13 0 1e-07 0.0051962222 2.7754601e-112 0 0 0 0 0 0
+4e-07 0 0 0 0 300.00001 0 1.216383e-07 0.079999998 0.033599999 3.3201742e-10 0.00021818182 -9.7886629e-13 0 1e-07 0.0051962222 1.4011671e-113 0 0 0 0 0 0

@@ -1,0 +1,85 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      binary;
+    arch        "LSB;label=32;scalar=64";
+    class       volVectorField;
+    location    "0";
+    object      U;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [0 1 -1 0 0 0 0];
+
+internalField   uniform (0.01 0 0);
+
+boundaryField
+{
+    inletSubstrate
+    {
+        type            fixedValue;
+        value           nonuniform List<vector> 0;
+    }
+    inletGas
+    {
+        type            fixedValue;
+        value           nonuniform List<vector> 0;
+    }
+    outlet
+    {
+        type            fixedValue;
+        value           uniform (0.01 0 0);
+    }
+    bottom
+    {
+        type            fixedValue;
+        value           uniform (0.01 0 0);
+    }
+    top
+    {
+        type            pressureInletOutletVelocity;
+        value           uniform (0.01 0 0);
+    }
+    symmetry
+    {
+        type            symmetryPlane;
+    }
+    side
+    {
+        type            fixedValue;
+        value           uniform (0.01 0 0);
+    }
+    wireInlet
+    {
+        type            uniformFixedValue;
+        uniformValue    table;
+        uniformValueCoeffs
+        {
+            values          
+4
+(
+(0 (0 0 0))
+(0.02 (0 0 0))
+(0.022 (1.0409498e-18 0 -0.017))
+(1000 (1.0409498e-18 0 -0.017))
+)
+;
+        }
+        value           nonuniform List<vector> 0;
+    }
+    procBoundary1to0
+    {
+        type            processor;
+        value           uniform (0.01 0 0);
+    }
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,315 @@
+=== sluice job: lpbf-short ===
+solver=laserbeamFoam ranks=6 wall=00:10:00 mesh=custom launcher=mpirun fileHandler=collated
+Mon Nov  2 07:56:39 PM IST 2026
+nodelist: ananyarch job: 7
+OpenFOAM v2506 at /home/anany/apps/OpenFOAM/OpenFOAM-v2506
+/home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05
+0
+constant
+sluice.sbatch
+slurm-7.err
+slurm-7.out
+system
+--- mesh: if [ ! -d 0 ]; then cp -r initial 0; fi ---
+--- mesh: blockMesh ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Nov 02 2026
+Time   : 19:56:40
+Host   : ananyarch
+PID    : 4086374
+I/O    : uncollated
+Case   : /home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+--> FOAM IOWarning :
+    Found [v1012] 'convertToMeters' entry instead of 'scale' in dictionary "system/blockMeshDict"
+
+    This keyword is 174 months old.
+
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 2.5e-06 .. 2.5e-06
+        j : 2.5e-06 .. 2.5e-06
+        k : 2.5e-06 .. 2.5e-06
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (0 0 0) (0.0001 0.00015 0.0002)
+  nPoints: 202581
+  nCells: 192000
+  nFaces: 586400
+  nInternalFaces: 565600
+----------------
+Patches
+----------------
+  patch 0 (start: 565600 size: 4800) name: back
+  patch 1 (start: 570400 size: 4800) name: front
+  patch 2 (start: 575200 size: 3200) name: leftWall
+  patch 3 (start: 578400 size: 3200) name: rightWall
+  patch 4 (start: 581600 size: 2400) name: topWall
+  patch 5 (start: 584000 size: 2400) name: bottomWall
+
+End
+
+--- mesh: setSolidFraction -subDivisions 6 ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : setSolidFraction -subDivisions 6
+Date   : Nov 02 2026
+Time   : 19:56:41
+Host   : ananyarch
+PID    : 4086906
+I/O    : uncollated
+Case   : /home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Phase alpha.metal name: alpha.metal
+Subdivision subDivisions = 6
+Representative cell size: (2.5e-06 2.5e-06 2.5e-06)
+Using cell size for subdivision: (2.5e-06 2.5e-06 2.5e-06)
+
+Reading the particle coordinates
+Reading Bed Plate properties
+Setting field region values
+Number of particles in domain = 47
+Highest particle at z = 0.000133703 radius = 1.45885e-05 (total height: 0.0001482915)
+[>                                                 ] 0 %[>                                                 ] 1 %[=>                                                ] 2 %[=>                                                ] 3 %[==>                                               ] 4 %[==>                                               ] 5 %[===>                                              ] 6 %[===>                                              ] 7 %[====>                                             ] 8 %[====>                                             ] 9 %[=====>                                            ] 10 %[=====>                                            ] 11 %[======>                                           ] 12 %[======>                                           ] 13 %[=======>                                          ] 14 %[=======>                                          ] 15 %[========>                                         ] 16 %[========>                                         ] 17 %[=========>                                        ] 18 %[=========>                                        ] 19 %[==========>                                       ] 20 %[==========>                                       ] 21 %[===========>                                      ] 22 %[===========>                                      ] 23 %[============>                                     ] 24 %[============>                                     ] 25 %[=============>                                    ] 26 %[=============>                                    ] 27 %[==============>                                   ] 28 %[==============>                                   ] 28 %[===============>                                  ] 30 %[===============>                                  ] 31 %[================>                                 ] 32 %[================>                                 ] 33 %[=================>                                ] 34 %[=================>                                ] 35 %[==================>                               ] 36 %[==================>                               ] 37 %[===================>                              ] 38 %[===================>                              ] 39 %[====================>                             ] 40 %[====================>                             ] 41 %[=====================>                            ] 42 %[=====================>                            ] 43 %[======================>                           ] 44 %[======================>                           ] 45 %[=======================>                          ] 46 %[=======================>                          ] 47 %[========================>                         ] 48 %[========================>                         ] 49 %[=========================>                        ] 50 %[=========================>                        ] 51 %[==========================>                       ] 52 %[==========================>                       ] 53 %[===========================>                      ] 54 %[===========================>                      ] 55 %[============================>                     ] 56 %[============================>                     ] 56 %[============================>                     ] 57 %[=============================>                    ] 59 %[==============================>                   ] 60 %[==============================>                   ] 61 %[===============================>                  ] 62 %[===============================>                  ] 63 %[================================>                 ] 64 %[================================>                 ] 65 %[=================================>                ] 66 %[=================================>                ] 67 %[==================================>               ] 68 %[==================================>               ] 69 %[===================================>              ] 70 %[===================================>              ] 71 %[====================================>             ] 72 %[====================================>             ] 73 %[=====================================>            ] 74 %[=====================================>            ] 75 %[======================================>           ] 76 %[======================================>           ] 77 %[=======================================>          ] 78 %[=======================================>          ] 79 %[========================================>         ] 80 %[========================================>         ] 81 %[=========================================>        ] 82 %[=========================================>        ] 83 %[==========================================>       ] 84 %[==========================================>       ] 85 %[===========================================>      ] 86 %[===========================================>      ] 87 %[============================================>     ] 88 %[============================================>     ] 89 %[=============================================>    ] 90 %[=============================================>    ] 91 %[==============================================>   ] 92 %[==============================================>   ] 93 %[===============================================>  ] 94 %[===============================================>  ] 95 %[================================================> ] 96 %[================================================> ] 97 %[=================================================>] 98 %[=================================================>] 99 %
+Writing alpha.metal to time = 0
+
+End
+--- mesh: transformPoints -rotate '((0 1 0) (0 0 1))' ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : transformPoints -rotate ((0 1 0) (0 0 1))
+Date   : Nov 02 2026
+Time   : 19:56:51
+Host   : ananyarch
+PID    : 4087968
+I/O    : uncollated
+Case   : /home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Rotating points by (1 0 0 0 0 -1 0 1 0)
+Writing points into directory "constant/polyMesh"
+
+
+End
+
+--- decomposePar check ---
+numberOfSubdomains=6 NTASKS=6
+--- decomposePar (0 -> 6) ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Nov 02 2026
+Time   : 19:56:52
+Host   : ananyarch
+PID    : 4088504
+I/O    : uncollated
+Case   : /home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+Calculating distribution of cells
+Decomposition method simple [6] (region region0)
+
+Finished decomposition in 0.07 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 32660
+    Number of points = 36571
+    Number of faces shared with processor 1 = 2479
+    Number of faces shared with processor 3 = 796
+    Number of faces shared with processor 4 = 1
+    Number of processor patches = 3
+    Number of processor faces = 3276
+    Number of boundary faces = 4316
+
+Processor 1
+    Number of cells = 32000
+    Number of points = 35898
+    Number of faces shared with processor 0 = 2479
+    Number of faces shared with processor 2 = 2433
+    Number of faces shared with processor 4 = 806
+    Number of faces shared with processor 5 = 1
+    Number of processor patches = 4
+    Number of processor faces = 5719
+    Number of boundary faces = 1847
+
+Processor 2
+    Number of cells = 31340
+    Number of points = 35188
+    Number of faces shared with processor 1 = 2433
+    Number of faces shared with processor 5 = 796
+    Number of processor patches = 2
+    Number of processor faces = 3229
+    Number of boundary faces = 4237
+
+Processor 3
+    Number of cells = 31340
+    Number of points = 35188
+    Number of faces shared with processor 0 = 796
+    Number of faces shared with processor 4 = 2433
+    Number of processor patches = 2
+    Number of processor faces = 3229
+    Number of boundary faces = 4237
+
+Processor 4
+    Number of cells = 32000
+    Number of points = 35898
+    Number of faces shared with processor 0 = 1
+    Number of faces shared with processor 1 = 806
+    Number of faces shared with processor 3 = 2433
+    Number of faces shared with processor 5 = 2479
+    Number of processor patches = 4
+    Number of processor faces = 5719
+    Number of boundary faces = 1847
+
+Processor 5
+    Number of cells = 32660
+    Number of points = 36571
+    Number of faces shared with processor 1 = 1
+    Number of faces shared with processor 2 = 796
+    Number of faces shared with processor 4 = 2479
+    Number of processor patches = 3
+    Number of processor faces = 3276
+    Number of boundary faces = 4316
+
+Number of processor faces = 12224
+Max number of cells = 32660 (2.0625% above average 32000)
+Max number of processor patches = 4 (33.33333333% above average 3)
+Max number of faces between processors = 5719 (40.35503927% above average 4074.666667)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+
+End
+
+--- mpirun laserbeamFoam -parallel -fileHandler collated ---
+solver exit: 0
+Correcting epsilon1, mean residual = 4.911909336e-08, max residual = 0.002034835908
+smoothSolver:  Solving for T, Initial residual = 3.374645991e-05, Final residual = 3.450145621e-10, No Iterations 4
+Correcting epsilon1, mean residual = 2.641532958e-09, max residual = 0.0001241802909
+smoothSolver:  Solving for T, Initial residual = 1.613738527e-05, Final residual = 5.636667347e-11, No Iterations 4
+Correcting epsilon1, mean residual = 1.746171987e-10, max residual = 7.582646958e-06
+smoothSolver:  Solving for T, Initial residual = 8.445336035e-06, Final residual = 5.570901939e-10, No Iterations 3
+Correcting epsilon1, mean residual = 1.10314148e-11, max residual = 5.819414706e-07
+DICPCG:  Solving for p_rgh, Initial residual = 0.01893925179, Final residual = 0.000910933395, No Iterations 5
+time step continuity errors : sum local = 1.452322664e-05, global = 2.245269461e-08, cumulative = -6.391164924e-08
+DICPCG:  Solving for p_rgh, Initial residual = 0.00115577254, Final residual = 5.515946916e-05, No Iterations 28
+time step continuity errors : sum local = 8.375055656e-07, global = -1.536636965e-07, cumulative = -2.175753458e-07
+DICPCG:  Solving for p_rgh, Initial residual = 0.0002831435332, Final residual = 9.172757007e-08, No Iterations 98
+time step continuity errors : sum local = 1.331149958e-09, global = 2.506534725e-11, cumulative = -2.175502804e-07
+Writing 114 ray paths to "/home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05/processor0/../VTKs/rays_laser0_2e-07.vtk"
+Writing ray path series file: "/home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05/processor0/../VTKs/rays_laser0.vtk.series"
+ExecutionTime = 2.91 s  ClockTime = 3 s
+
+End
+
+Finalising parallel run
+--- post skipped (no reconstruct/commands) ---

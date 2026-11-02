@@ -1,0 +1,198 @@
+=== sluice job: wlam-short ===
+solver=laserWireDEDFoam ranks=2 wall=00:10:00 mesh=custom launcher=mpirun fileHandler=collated
+Mon Nov  2 07:56:36 PM IST 2026
+nodelist: ananyarch job: 5
+OpenFOAM v2506 at /home/anany/apps/OpenFOAM/OpenFOAM-v2506
+/home/anany/shared_anany/wlam/.foam-runs-short/32827378-e681-4b4f-a9cc-ba15a5eed06c
+0.orig
+constant
+sluice.sbatch
+slurm-5.err
+slurm-5.out
+system
+--- mesh: blockMesh ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Nov 02 2026
+Time   : 19:56:37
+Host   : ananyarch
+PID    : 4083221
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs-short/32827378-e681-4b4f-a9cc-ba15a5eed06c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 1
+		Number of boundary faces : 10
+		Number of defined boundary faces : 10
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.00034203691 .. 0.0004631999
+        j : 0.00014666667 .. 0.00041869832
+        k : 0.00068571429 .. 0.00016
+
+    Block 1 cell size :
+        i : 0.00034203691 .. 0.0004631999
+        j : 0.00014666667 .. 0.00041869832
+        k : 0.00014545455 .. 0.00030783322
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-0.0035 0 -0.002) (0.0065 0.003 0.0025)
+  nPoints: 26904
+  nCells: 24012
+  nFaces: 74828
+  nInternalFaces: 69244
+----------------
+Patches
+----------------
+  patch 0 (start: 69244 size: 144) name: inletSubstrate
+  patch 1 (start: 69388 size: 270) name: inletGas
+  patch 2 (start: 69658 size: 414) name: outlet
+  patch 3 (start: 70072 size: 1044) name: bottom
+  patch 4 (start: 71116 size: 1044) name: top
+  patch 5 (start: 72160 size: 1334) name: symmetry
+  patch 6 (start: 73494 size: 1334) name: side
+
+End
+
+--- mesh: topoSet ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : topoSet
+Date   : Nov 02 2026
+Time   : 19:56:37
+Host   : ananyarch
+PID    : 4083733
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs-short/32827378-e681-4b4f-a9cc-ba15a5eed06c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created faceSet wireInletFaces
+    Applying source patchToFace
+    Adding all faces of patches: (top) ...
+    Found matching patch top with 1044 faces
+    faceSet wireInletFaces now size 1044
+Read set faceSet wireInletFaces size:1044
+    Applying source cylinderToFace
+    Adding faces with centres within cylinder, with point1 = (-6.123234e-20 0 0.001), point2 = (-2.4492936e-19 0 0.004), radius = 0.000450001
+    faceSet wireInletFaces now size 15
+
+End
+
+--- mesh: createPatch -overwrite ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : createPatch -overwrite
+Date   : Nov 02 2026
+Time   : 19:56:38
+Host   : ananyarch
+PID    : 4084236
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs-short/32827378-e681-4b4f-a9cc-ba15a5eed06c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading "system/createPatchDict"
+
+
+
+Adding patches to mesh region0
+
+Adding new patch wireInlet from 
+{
+    type            patch;
+    nFaces          0;
+    startFace       0;
+}
+
+
+
+
+Repatching mesh region0
+
+Read 15 faces from faceSet wireInletFaces
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+
+
+Writing repatched mesh region0 to 0
+
+End
+
+--- mesh: mkdir -p 0 && cp 0.orig/* 0/ ---

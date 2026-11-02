@@ -1,0 +1,30 @@
+apiVersion: sluice/v1alpha1
+name: wlam
+case:
+  path: ./case
+mesh:
+  strategy: custom
+  commands:
+    - blockMesh
+    - topoSet
+    - createPatch -overwrite
+    - mkdir -p 0 && cp 0.orig/* 0/
+    - mv 0/U.orig 0/U
+    - mv 0/alpha.metal.orig 0/alpha.metal
+    - mv 0/cWire.orig 0/cWire
+    - setFields
+resources:
+  partition: all
+  nodes: 1
+  tasksPerNode: 2
+  timeLimitMinutes: 30
+solver:
+  name: laserWireDEDFoam
+runtime:
+  foamBashrc: /home/anany/shared_anany/wlam/foam-env.sh
+  threadsPerRank: 1
+  mpi:
+    launcher: mpirun
+storage:
+  cacheDir: ./.foam-cache
+  runDir: ./.foam-runs

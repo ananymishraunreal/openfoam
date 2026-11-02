@@ -1,0 +1,121 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Nov 02 2026
+Time   : 19:56:52
+Host   : ananyarch
+PID    : 4088504
+I/O    : uncollated
+Case   : /home/anany/shared_anany/lpbf/.foam-runs-short/d740020a-a910-44e5-9255-cbaf3baaeb05
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+Calculating distribution of cells
+Decomposition method simple [6] (region region0)
+
+Finished decomposition in 0.07 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 32660
+    Number of points = 36571
+    Number of faces shared with processor 1 = 2479
+    Number of faces shared with processor 3 = 796
+    Number of faces shared with processor 4 = 1
+    Number of processor patches = 3
+    Number of processor faces = 3276
+    Number of boundary faces = 4316
+
+Processor 1
+    Number of cells = 32000
+    Number of points = 35898
+    Number of faces shared with processor 0 = 2479
+    Number of faces shared with processor 2 = 2433
+    Number of faces shared with processor 4 = 806
+    Number of faces shared with processor 5 = 1
+    Number of processor patches = 4
+    Number of processor faces = 5719
+    Number of boundary faces = 1847
+
+Processor 2
+    Number of cells = 31340
+    Number of points = 35188
+    Number of faces shared with processor 1 = 2433
+    Number of faces shared with processor 5 = 796
+    Number of processor patches = 2
+    Number of processor faces = 3229
+    Number of boundary faces = 4237
+
+Processor 3
+    Number of cells = 31340
+    Number of points = 35188
+    Number of faces shared with processor 0 = 796
+    Number of faces shared with processor 4 = 2433
+    Number of processor patches = 2
+    Number of processor faces = 3229
+    Number of boundary faces = 4237
+
+Processor 4
+    Number of cells = 32000
+    Number of points = 35898
+    Number of faces shared with processor 0 = 1
+    Number of faces shared with processor 1 = 806
+    Number of faces shared with processor 3 = 2433
+    Number of faces shared with processor 5 = 2479
+    Number of processor patches = 4
+    Number of processor faces = 5719
+    Number of boundary faces = 1847
+
+Processor 5
+    Number of cells = 32660
+    Number of points = 36571
+    Number of faces shared with processor 1 = 1
+    Number of faces shared with processor 2 = 796
+    Number of faces shared with processor 4 = 2479
+    Number of processor patches = 3
+    Number of processor faces = 3276
+    Number of boundary faces = 4316
+
+Number of processor faces = 12224
+Max number of cells = 32660 (2.0625% above average 32000)
+Max number of processor patches = 4 (33.33333333% above average 3)
+Max number of faces between processors = 5719 (40.35503927% above average 4074.666667)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+Processor 2: field transfer
+Processor 3: field transfer
+Processor 4: field transfer
+Processor 5: field transfer
+
+End
+
