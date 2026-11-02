@@ -1,0 +1,325 @@
+=== sluice job: wlam ===
+solver=laserWireDEDFoam ranks=2 wall=00:30:00 mesh=custom launcher=mpirun fileHandler=collated
+Mon Nov  2 09:25:47 PM IST 2026
+nodelist: ananyarch job: 10
+OpenFOAM v2506 at /home/anany/apps/OpenFOAM/OpenFOAM-v2506
+/home/anany/shared_anany/wlam/.foam-runs/6abfc326-5f9d-4b1e-9b7c-f54bb159df3c
+0.orig
+constant
+sluice.sbatch
+slurm-10.err
+slurm-10.out
+system
+--- mesh: blockMesh ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : blockMesh
+Date   : Nov 02 2026
+Time   : 21:25:48
+Host   : ananyarch
+PID    : 241574
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs/6abfc326-5f9d-4b1e-9b7c-f54bb159df3c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Creating block mesh from "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+
+Creating topology patches - from boundary section
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 1
+		Number of boundary faces : 10
+		Number of defined boundary faces : 10
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list (topological search)...
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale (1 1 1)
+    Block 0 cell size :
+        i : 0.00034203691 .. 0.0004631999
+        j : 0.00014666667 .. 0.00041869832
+        k : 0.00068571429 .. 0.00016
+
+    Block 1 cell size :
+        i : 0.00034203691 .. 0.0004631999
+        j : 0.00014666667 .. 0.00041869832
+        k : 0.00014545455 .. 0.00030783322
+
+No patch pairs to merge
+
+Writing polyMesh with 0 cellZones
+----------------
+Mesh Information
+----------------
+  boundingBox: (-0.0035 0 -0.002) (0.0065 0.003 0.0025)
+  nPoints: 26904
+  nCells: 24012
+  nFaces: 74828
+  nInternalFaces: 69244
+----------------
+Patches
+----------------
+  patch 0 (start: 69244 size: 144) name: inletSubstrate
+  patch 1 (start: 69388 size: 270) name: inletGas
+  patch 2 (start: 69658 size: 414) name: outlet
+  patch 3 (start: 70072 size: 1044) name: bottom
+  patch 4 (start: 71116 size: 1044) name: top
+  patch 5 (start: 72160 size: 1334) name: symmetry
+  patch 6 (start: 73494 size: 1334) name: side
+
+End
+
+--- mesh: topoSet ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : topoSet
+Date   : Nov 02 2026
+Time   : 21:25:48
+Host   : ananyarch
+PID    : 242088
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs/6abfc326-5f9d-4b1e-9b7c-f54bb159df3c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create polyMesh for time = 0
+
+Reading topoSetDict
+
+Time = 0
+    mesh not changed.
+Created faceSet wireInletFaces
+    Applying source patchToFace
+    Adding all faces of patches: (top) ...
+    Found matching patch top with 1044 faces
+    faceSet wireInletFaces now size 1044
+Read set faceSet wireInletFaces size:1044
+    Applying source cylinderToFace
+    Adding faces with centres within cylinder, with point1 = (-6.123234e-20 0 0.001), point2 = (-2.4492936e-19 0 0.004), radius = 0.000450001
+    faceSet wireInletFaces now size 15
+
+End
+
+--- mesh: createPatch -overwrite ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : createPatch -overwrite
+Date   : Nov 02 2026
+Time   : 21:25:49
+Host   : ananyarch
+PID    : 242630
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs/6abfc326-5f9d-4b1e-9b7c-f54bb159df3c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading "system/createPatchDict"
+
+
+
+Adding patches to mesh region0
+
+Adding new patch wireInlet from 
+{
+    type            patch;
+    nFaces          0;
+    startFace       0;
+}
+
+
+
+
+Repatching mesh region0
+
+Read 15 faces from faceSet wireInletFaces
+Doing topology modification to order faces.
+
+Not synchronising points.
+
+Removing patches with no faces in them.
+
+
+
+Writing repatched mesh region0 to 0
+
+End
+
+--- mesh: mkdir -p 0 && cp 0.orig/* 0/ ---
+--- mesh: mv 0/U.orig 0/U ---
+--- mesh: mv 0/alpha.metal.orig 0/alpha.metal ---
+--- mesh: mv 0/cWire.orig 0/cWire ---
+--- mesh: setFields ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : setFields
+Date   : Nov 02 2026
+Time   : 21:25:52
+Host   : ananyarch
+PID    : 245326
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs/6abfc326-5f9d-4b1e-9b7c-f54bb159df3c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Reading setFieldsDict
+
+Setting volume field default values
+    - set internal values of volScalarField: alpha.metal = 0
+    - set internal values of volScalarField: cWire = 0
+    - set internal values of volVectorField: U = (0.01 0 0)
+
+Setting field region values
+
+    Adding cells with centre within boxes 1((-1 -1 -1) (1 1 0))
+    Selected 8352/24012 cells
+    - set internal values of volScalarField: alpha.metal = 1
+    Adding cells with centres within cylinder, with point1 = (-3.061617e-21 0 5e-05), point2 = (-3.3677787e-19 0 0.0055), radius = 0.00045
+    Selected 225/24012 cells
+    - set internal values of volScalarField: alpha.metal = 1
+    - set internal values of volScalarField: cWire = 1
+    - set internal values of volVectorField: U = (0 0 0)
+
+End
+
+--- decomposePar check ---
+numberOfSubdomains=2 NTASKS=2
+--- decomposePar (0 -> 2) ---
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2506                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _615aae61d7-20250627 OPENFOAM=2506 version=v2506
+Arch   : "LSB;label=32;scalar=64"
+Exec   : decomposePar
+Date   : Nov 02 2026
+Time   : 21:25:52
+Host   : ananyarch
+PID    : 245881
+I/O    : uncollated
+Case   : /home/anany/shared_anany/wlam/.foam-runs/6abfc326-5f9d-4b1e-9b7c-f54bb159df3c
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh
+
+Create mesh
+
+Calculating distribution of cells
+Decomposition method simple [2] (region region0)
+
+Finished decomposition in 0.02 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 12006
+    Number of points = 13680
+    Number of faces shared with processor 1 = 414
+    Number of processor patches = 1
+    Number of processor faces = 414
+    Number of boundary faces = 2792
+
+Processor 1
+    Number of cells = 12006
+    Number of points = 13680
+    Number of faces shared with processor 0 = 414
+    Number of processor patches = 1
+    Number of processor faces = 414
+    Number of boundary faces = 2792
+
+Number of processor faces = 414
+Max number of cells = 12006 (0% above average 12006)
+Max number of processor patches = 1 (0% above average 1)
+Max number of faces between processors = 414 (0% above average 414)
+
+Time = 0
+
+Processor 0: field transfer
+Processor 1: field transfer
+
+End
+
+--- mpirun laserWireDEDFoam -parallel -fileHandler collated ---
