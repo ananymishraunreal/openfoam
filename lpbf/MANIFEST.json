@@ -1,0 +1,350 @@
+{
+ "project": "lpbf",
+ "description": "LPBF fixture: laserbeamFoam LPBF_small tutorial case (2D powder bed fusion)",
+ "sources": [
+  {
+   "repo": "https://github.com/laserbeamfoam/LaserbeamFoam",
+   "commit": "3827840e600b6c15fe7eeb19d437c4f2a33b4c4f",
+   "branch": "OpenFoam_com_main",
+   "path": "tutorials/laserbeamFoam/LPBF_small"
+  },
+  {
+   "repo": "https://github.com/laserbeamfoam/LaserbeamFoam",
+   "commit": "3827840e600b6c15fe7eeb19d437c4f2a33b4c4f",
+   "path": "LICENSE"
+  }
+ ],
+ "license": "GPL-3.0 (LaserbeamFoam, verbatim in LICENSE.laserbeamFoam)",
+ "fetched_by": "bin/fetch_case.sh",
+ "policy": "raw fixture; Sluice auto-generates runtime files during manifest",
+ "fetched_at": "2026-11-02",
+ "total_bytes": 2288267,
+ "n_files": 65,
+ "files": [
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/constant/LaserProperties",
+   "bytes": 1031,
+   "sha256": "921d1ce660fcec94429665e5bf8ad7faf4baa11b15b5d35786c1efde8d122b01"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/constant/g",
+   "bytes": 936,
+   "sha256": "a7f9edaff299142f96adc741ec10ee78c9a9cdf60fdb340875c6aa9dbbe1b7ba"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/constant/location",
+   "bytes": 2363,
+   "sha256": "1a25b357dc7c340bc971d2e8e379dc41e7daa6784f416c0f00583dba19e2c85f"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/constant/timeVsLaserPosition",
+   "bytes": 119,
+   "sha256": "8f086f1dd7783d7df6342f675609170d6044195e8f3c9ecc266074b625875410"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/constant/timeVsLaserPower",
+   "bytes": 138,
+   "sha256": "bacc11aace441aa14d316abc1c1ee91244543e1974e525887872f1310c1be35c"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/constant/transportProperties",
+   "bytes": 1851,
+   "sha256": "03a3642b6fa6f342e5c8c56d19ef72ac89d35a8fb6cacce7ff12f323b8a89b84"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/constant/turbulenceProperties",
+   "bytes": 707,
+   "sha256": "0baab4aa39e68fe04a21a5768b3c32bf1d4179f1f84b44067f9d8558f1132081"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/initial/Laser_boundary",
+   "bytes": 1388,
+   "sha256": "73d1e83c1fde975cd26578ad542b22bccbe4bfd9cbe2e4160e157e13ddebf1fa"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/initial/T",
+   "bytes": 1658,
+   "sha256": "d57215f445f2c37772360db8ea5bff7f182075764f47bf3f6b68ff4cae18e508"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/initial/TRHS",
+   "bytes": 1319,
+   "sha256": "96b2aaa2f8803dfebccc817ee0734e9d65d3b6b98a5aa2b387fa2f8d0c8f6140"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/initial/U",
+   "bytes": 2037,
+   "sha256": "08b44455460c44c725e9066c3c2a19ca13bf265fada459b1a969757314bb36b1"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/initial/alpha.metal",
+   "bytes": 1126,
+   "sha256": "7564ccc567b4d5fe4da0549a40347f518e741b44da77ec22d77166404c4e6ef4"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/initial/p_rgh",
+   "bytes": 1533,
+   "sha256": "6f650e0a7872c5dd9e9cfee66f3c2cb6a796c65ddbe199441010ba4f8d0afe93"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/system/bedPlateDict",
+   "bytes": 946,
+   "sha256": "dd3fb73f529d23fcdcde02bb27576ca76aaf0cf42faceace67cfa2c0cbb04e0f"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/system/blockMeshDict",
+   "bytes": 1781,
+   "sha256": "1ad770e86551530f299c0621a325787e0466e1c4ed305c8ad750bb5ed34f6e88"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/system/controlDict",
+   "bytes": 1344,
+   "sha256": "672446560da0502d58fe894f6e2e8258b39dfe89f458f799f889262bd5610870"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/system/decomposeParDict",
+   "bytes": 1180,
+   "sha256": "d539bc73efbbf0d351c893db16da35772f118f73a27891cd532ff4e5d378c445"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/system/fvSchemes",
+   "bytes": 1293,
+   "sha256": "bc9603132c27e48553db8f1bfc23b73bcaee89cda185843a175b8bc6db19e70c"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/system/fvSolution",
+   "bytes": 2197,
+   "sha256": "41754df7190153f3dc6c0ea6d2f0570c4620f66da1f4c944278eb8fa1d440c55"
+  },
+  {
+   "path": ".foam-cache/802551fd456497e02c958020d7241b43f714be62d5568cbf390e3320a0a7f3fa/system/setFieldsDict",
+   "bytes": 2013,
+   "sha256": "5740286e11126ba9b88d8b02d745c57f8cffaee17795a2205340214d5c1757a8"
+  },
+  {
+   "path": "LICENSE.laserbeamFoam",
+   "bytes": 35149,
+   "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986"
+  },
+  {
+   "path": "README.md",
+   "bytes": 2751,
+   "sha256": "9f1db3a5322426a0de1a92758043fdf53f839320e5508c221ce274cda8c6f934"
+  },
+  {
+   "path": "RUN.md",
+   "bytes": 675,
+   "sha256": "87e509031c47008d8531362505832b14bc87931be62a32aabd2400b9d304ba50"
+  },
+  {
+   "path": "bin/laserbeamFoam",
+   "bytes": 2090760,
+   "sha256": "8adf1d2aa143c62c409ac5dc5d5e6e12879c682df65e23469661d82bdeb4ab95"
+  },
+  {
+   "path": "case/0/Laser_boundary",
+   "bytes": 1388,
+   "sha256": "73d1e83c1fde975cd26578ad542b22bccbe4bfd9cbe2e4160e157e13ddebf1fa"
+  },
+  {
+   "path": "case/0/T",
+   "bytes": 1658,
+   "sha256": "d57215f445f2c37772360db8ea5bff7f182075764f47bf3f6b68ff4cae18e508"
+  },
+  {
+   "path": "case/0/TRHS",
+   "bytes": 1319,
+   "sha256": "96b2aaa2f8803dfebccc817ee0734e9d65d3b6b98a5aa2b387fa2f8d0c8f6140"
+  },
+  {
+   "path": "case/0/U",
+   "bytes": 2037,
+   "sha256": "08b44455460c44c725e9066c3c2a19ca13bf265fada459b1a969757314bb36b1"
+  },
+  {
+   "path": "case/0/alpha.metal",
+   "bytes": 1126,
+   "sha256": "7564ccc567b4d5fe4da0549a40347f518e741b44da77ec22d77166404c4e6ef4"
+  },
+  {
+   "path": "case/0/p_rgh",
+   "bytes": 1533,
+   "sha256": "6f650e0a7872c5dd9e9cfee66f3c2cb6a796c65ddbe199441010ba4f8d0afe93"
+  },
+  {
+   "path": "case/Allclean",
+   "bytes": 173,
+   "sha256": "11f6958f08f76bdaafa90e3d259de5ef6f9ea872f8be101907205c0b1acdfe08"
+  },
+  {
+   "path": "case/Allrun",
+   "bytes": 730,
+   "sha256": "44e3d70d7f26229f32477b8a854681224d9b7052e4d010ff73594eb9c874bc67"
+  },
+  {
+   "path": "case/DEM_small/Allclean",
+   "bytes": 36,
+   "sha256": "6c640ef1714c4c0a1e4ea1e072518bf086b6c21ac1067404a63fb054cb682b5f"
+  },
+  {
+   "path": "case/DEM_small/Allrun",
+   "bytes": 271,
+   "sha256": "deec4f1b3e6dddc59892de0fb37fa78101fdf0f8597a8e01b5d960707c33a7c2"
+  },
+  {
+   "path": "case/DEM_small/input.liggghts",
+   "bytes": 4633,
+   "sha256": "7114459b75df01a42705075b63c647c46ac22113fff08e666afe48e0b0ed2ba2"
+  },
+  {
+   "path": "case/DEM_small/meshes/domain.FCStd",
+   "bytes": 5781,
+   "sha256": "667f25e915292020a2129288a98df55a10386d31d0bc1a808335aa328d06be80"
+  },
+  {
+   "path": "case/DEM_small/meshes/domain.FCStd1",
+   "bytes": 5748,
+   "sha256": "2b3bf1bce583a8e9aeef33bd91c4dc9a7b7966010c476c4448ffe69ce6553839"
+  },
+  {
+   "path": "case/DEM_small/meshes/domain.stl",
+   "bytes": 684,
+   "sha256": "8fb3bdeba33dd0cc6df0e5162cdb9549ad5882b0bc13c7f34294c5edc64e3b81"
+  },
+  {
+   "path": "case/DEM_small/meshes/plate.stl",
+   "bytes": 684,
+   "sha256": "07435ab610483e927a64297fce2775d646f08278d61e509a03ce130b8d2843ca"
+  },
+  {
+   "path": "case/README.md",
+   "bytes": 5306,
+   "sha256": "294bc08a2cc4669cdd2da69af74bbb3068c86712ff950b30714c7495a517d25b"
+  },
+  {
+   "path": "case/constant/LaserProperties",
+   "bytes": 1031,
+   "sha256": "921d1ce660fcec94429665e5bf8ad7faf4baa11b15b5d35786c1efde8d122b01"
+  },
+  {
+   "path": "case/constant/g",
+   "bytes": 936,
+   "sha256": "a7f9edaff299142f96adc741ec10ee78c9a9cdf60fdb340875c6aa9dbbe1b7ba"
+  },
+  {
+   "path": "case/constant/location",
+   "bytes": 2363,
+   "sha256": "1a25b357dc7c340bc971d2e8e379dc41e7daa6784f416c0f00583dba19e2c85f"
+  },
+  {
+   "path": "case/constant/timeVsLaserPosition",
+   "bytes": 119,
+   "sha256": "8f086f1dd7783d7df6342f675609170d6044195e8f3c9ecc266074b625875410"
+  },
+  {
+   "path": "case/constant/timeVsLaserPower",
+   "bytes": 138,
+   "sha256": "bacc11aace441aa14d316abc1c1ee91244543e1974e525887872f1310c1be35c"
+  },
+  {
+   "path": "case/constant/transportProperties",
+   "bytes": 1851,
+   "sha256": "03a3642b6fa6f342e5c8c56d19ef72ac89d35a8fb6cacce7ff12f323b8a89b84"
+  },
+  {
+   "path": "case/constant/turbulenceProperties",
+   "bytes": 707,
+   "sha256": "0baab4aa39e68fe04a21a5768b3c32bf1d4179f1f84b44067f9d8558f1132081"
+  },
+  {
+   "path": "case/initial/Laser_boundary",
+   "bytes": 1388,
+   "sha256": "73d1e83c1fde975cd26578ad542b22bccbe4bfd9cbe2e4160e157e13ddebf1fa"
+  },
+  {
+   "path": "case/initial/T",
+   "bytes": 1658,
+   "sha256": "d57215f445f2c37772360db8ea5bff7f182075764f47bf3f6b68ff4cae18e508"
+  },
+  {
+   "path": "case/initial/TRHS",
+   "bytes": 1319,
+   "sha256": "96b2aaa2f8803dfebccc817ee0734e9d65d3b6b98a5aa2b387fa2f8d0c8f6140"
+  },
+  {
+   "path": "case/initial/U",
+   "bytes": 2037,
+   "sha256": "08b44455460c44c725e9066c3c2a19ca13bf265fada459b1a969757314bb36b1"
+  },
+  {
+   "path": "case/initial/alpha.metal",
+   "bytes": 1126,
+   "sha256": "7564ccc567b4d5fe4da0549a40347f518e741b44da77ec22d77166404c4e6ef4"
+  },
+  {
+   "path": "case/initial/p_rgh",
+   "bytes": 1533,
+   "sha256": "6f650e0a7872c5dd9e9cfee66f3c2cb6a796c65ddbe199441010ba4f8d0afe93"
+  },
+  {
+   "path": "case/media/ContactParameters.PNG",
+   "bytes": 32374,
+   "sha256": "798cab75a731c4efccde72838f23b25913836d6d35fca72d1eb7c5081bc62487"
+  },
+  {
+   "path": "case/media/PSD.PNG",
+   "bytes": 38780,
+   "sha256": "803b15aec187050de3b67de8cdb7a9653a4c5eb966c0285979de264f1f9659b2"
+  },
+  {
+   "path": "case/system/bedPlateDict",
+   "bytes": 946,
+   "sha256": "dd3fb73f529d23fcdcde02bb27576ca76aaf0cf42faceace67cfa2c0cbb04e0f"
+  },
+  {
+   "path": "case/system/blockMeshDict",
+   "bytes": 1781,
+   "sha256": "1ad770e86551530f299c0621a325787e0466e1c4ed305c8ad750bb5ed34f6e88"
+  },
+  {
+   "path": "case/system/controlDict",
+   "bytes": 1331,
+   "sha256": "072a6185a3d02bbf938e06a5bad27eb98beb39925afeaa5a3455510c567486db"
+  },
+  {
+   "path": "case/system/decomposeParDict",
+   "bytes": 1180,
+   "sha256": "d539bc73efbbf0d351c893db16da35772f118f73a27891cd532ff4e5d378c445"
+  },
+  {
+   "path": "case/system/fvSchemes",
+   "bytes": 1293,
+   "sha256": "bc9603132c27e48553db8f1bfc23b73bcaee89cda185843a175b8bc6db19e70c"
+  },
+  {
+   "path": "case/system/fvSolution",
+   "bytes": 2197,
+   "sha256": "41754df7190153f3dc6c0ea6d2f0570c4620f66da1f4c944278eb8fa1d440c55"
+  },
+  {
+   "path": "case/system/setFieldsDict",
+   "bytes": 2013,
+   "sha256": "5740286e11126ba9b88d8b02d745c57f8cffaee17795a2205340214d5c1757a8"
+  },
+  {
+   "path": "foam-env.sh",
+   "bytes": 120,
+   "sha256": "d790d0639d4fc43a6a25d38f3551c40cddb8073d724b30ed47dc3d2470d597f3"
+  },
+  {
+   "path": "manifest.yaml",
+   "bytes": 530,
+   "sha256": "057adc7a443a5358cbd690e74194f7fca4873e937899846770aa7eb8b76bc8dc"
+  },
+  {
+   "path": "run.sh",
+   "bytes": 114,
+   "sha256": "2c67e18172d4da01f9077da29758278b1c97c09d4b73e4ebe7a3a7f559c9cb0a"
+  }
+ ]
+}
