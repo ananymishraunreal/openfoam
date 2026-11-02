@@ -1,0 +1,261 @@
+{
+ "project": "waam",
+ "description": "WAAM surrogate: OpenFOAM-10 damBreak (stock interFoam VOF) as plumbing fixture + laserbeamFoam fiveLasersOnSubstrate as moving-heat-source reference",
+ "sources": [
+  {
+   "repo": "https://github.com/OpenFOAM/OpenFOAM-10",
+   "commit": "89f925dc708d068f84f51e8317e3bebcda64f5cb",
+   "branch": "master",
+   "path": "tutorials/multiphase/interFoam/laminar/damBreak"
+  },
+  {
+   "repo": "https://github.com/OpenFOAM/OpenFOAM-10",
+   "commit": "89f925dc708d068f84f51e8317e3bebcda64f5cb",
+   "path": "COPYING"
+  },
+  {
+   "repo": "https://github.com/laserbeamfoam/LaserbeamFoam",
+   "commit": "3827840e600b6c15fe7eeb19d437c4f2a33b4c4f",
+   "branch": "OpenFoam_com_main",
+   "path": "tutorials/laserbeamFoam/fiveLasersOnSubstrate"
+  },
+  {
+   "repo": "https://github.com/laserbeamfoam/LaserbeamFoam",
+   "commit": "3827840e600b6c15fe7eeb19d437c4f2a33b4c4f",
+   "path": "LICENSE"
+  }
+ ],
+ "license": "GPL (OpenFOAM-10 COPYING; LaserbeamFoam GPL-3.0)",
+ "fetched_by": "bin/fetch_case.sh",
+ "policy": "raw fixture; Sluice auto-generates runtime files during manifest",
+ "fetched_at": "2026-10-29",
+ "total_bytes": 78807,
+ "n_files": 45,
+ "files": [
+  {
+   "path": "README.md",
+   "bytes": 1956,
+   "sha256": "c66193e42801c401ed341d2ff69ac9a92ebf804ca8c515191c690dd62e3c899d"
+  },
+  {
+   "path": "base/LICENSE.openfoam-10",
+   "bytes": 35646,
+   "sha256": "a62f4262b9739f43478d025ed9fc5419585ec27b4b50e88f55e3186141e18ef1"
+  },
+  {
+   "path": "base/damBreak/0/U",
+   "bytes": 1104,
+   "sha256": "1a8c29ca29a9e3863d14f3b606083d8d0e685ad201148d04c00279584cd749b5"
+  },
+  {
+   "path": "base/damBreak/0/alpha.water.orig",
+   "bytes": 1120,
+   "sha256": "1a8737ce1303bed67a7832699686971c03b2161e9f019e8b27380ad7cd0f84ff"
+  },
+  {
+   "path": "base/damBreak/0/p_rgh",
+   "bytes": 1207,
+   "sha256": "0e2db4a6a74e1eede18a6bce46b67180109d6e3e258c76849c066df071b26c43"
+  },
+  {
+   "path": "base/damBreak/Allclean",
+   "bytes": 388,
+   "sha256": "1117f0dce4c627bf489a268dbfd99bf4c8739798562890ad05697c862b99d86a"
+  },
+  {
+   "path": "base/damBreak/Allrun",
+   "bytes": 348,
+   "sha256": "7d1ff3bdf6d4fab1a699efff384c95b1172f922b6e045f19a71bccff2c407641"
+  },
+  {
+   "path": "base/damBreak/constant/g",
+   "bytes": 748,
+   "sha256": "020ff4b102fdaa3386e66a2d420653d48dc17866ff8a9a51a9669fabc9d0958a"
+  },
+  {
+   "path": "base/damBreak/constant/momentumTransport",
+   "bytes": 707,
+   "sha256": "0baab4aa39e68fe04a21a5768b3c32bf1d4179f1f84b44067f9d8558f1132081"
+  },
+  {
+   "path": "base/damBreak/constant/phaseProperties",
+   "bytes": 732,
+   "sha256": "0c762081552409e510a5847672556772e7c4eeceb0ce11ac314ded3ea19b55db"
+  },
+  {
+   "path": "base/damBreak/constant/physicalProperties.air",
+   "bytes": 760,
+   "sha256": "d2b8e98380b232073d35f1de7cbc7a37efc0d7fc6f2de02a7c9b5310ab1b8b63"
+  },
+  {
+   "path": "base/damBreak/constant/physicalProperties.water",
+   "bytes": 762,
+   "sha256": "c29bea257e659e224fea66a9dccc925b0d179e71703f811169acc45e6a9d7c36"
+  },
+  {
+   "path": "base/damBreak/system/blockMeshDict",
+   "bytes": 2069,
+   "sha256": "2466dd06f14644ec292216389a3e2ed703640de0d78b051f0434aaf315590d5e"
+  },
+  {
+   "path": "base/damBreak/system/controlDict",
+   "bytes": 1117,
+   "sha256": "ed7cbe3649fbdda5a856555338f1bcd21eb365cc94815e0cdbb1a52185ad3804"
+  },
+  {
+   "path": "base/damBreak/system/decomposeParDict",
+   "bytes": 936,
+   "sha256": "f8f1eaee0fb4f4d961ce2d7b6133c895b2816846a4c2c0fe4cf1402c3cba1ab0"
+  },
+  {
+   "path": "base/damBreak/system/fvSchemes",
+   "bytes": 1110,
+   "sha256": "07044ae7227cd1f1f7fd5cb5d7f2e781513778845753043b951584c82197c2d6"
+  },
+  {
+   "path": "base/damBreak/system/fvSolution",
+   "bytes": 1665,
+   "sha256": "a78d6b3902bec85504b5452cd87dc73b71181faa64cddbfdbebef38ea4ac9134"
+  },
+  {
+   "path": "base/damBreak/system/setFieldsDict",
+   "bytes": 904,
+   "sha256": "0ef008b45d42173e37202b72815d5bd61041bb484f4a0f09dfe95c847ad369d3"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/Allclean",
+   "bytes": 143,
+   "sha256": "0583ccdf9491a8c14a783138b090eb4fc2277ee87ec945bbb44a70adb40e7711"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/Allrun",
+   "bytes": 358,
+   "sha256": "81c8ff58f87a843c9a29cdd3e1986c40c8d69686748e3abf72666c7ebba8cefd"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/LaserProperties",
+   "bytes": 3723,
+   "sha256": "46257c413304deb08e601f4585d67a4a33e5a42d1f666a52baa444f2858aec18"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/g",
+   "bytes": 747,
+   "sha256": "5a7ebc9ea548bd1c1bc1328888a229a535ace6aa5a09ef749645efb751cbc366"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPosition0",
+   "bytes": 69,
+   "sha256": "1f3e5b2d16eb4d17d429777cbf3f0cbcd553a36df3ffc3595cfcc09fb15a856b"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPosition1",
+   "bytes": 69,
+   "sha256": "4a31a66d44b7036652fa9fc25b8452869ce294819280f1322edb1d5bdf514aea"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPosition2",
+   "bytes": 63,
+   "sha256": "535627a3af6c0d29bddda28e39aa89aa3ad080bdb8aab0d37b58ddb2bb14d810"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPosition3",
+   "bytes": 67,
+   "sha256": "7e301697ffa5ddc901bc7e39a118b08e368611d561c9893fdef7d23240208217"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPosition4",
+   "bytes": 67,
+   "sha256": "84df68e5d597d234cabc77bdb294e651cf46b5ed86b6892a2ffd563c70145149"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPower0",
+   "bytes": 136,
+   "sha256": "93f2091c1499aba1cbbe8454697a62a16085f8bebf8ff436e14ef63372b012bc"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPower1",
+   "bytes": 136,
+   "sha256": "93f2091c1499aba1cbbe8454697a62a16085f8bebf8ff436e14ef63372b012bc"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPower2",
+   "bytes": 136,
+   "sha256": "93f2091c1499aba1cbbe8454697a62a16085f8bebf8ff436e14ef63372b012bc"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPower3",
+   "bytes": 136,
+   "sha256": "93f2091c1499aba1cbbe8454697a62a16085f8bebf8ff436e14ef63372b012bc"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/timeVsLaserPower4",
+   "bytes": 136,
+   "sha256": "93f2091c1499aba1cbbe8454697a62a16085f8bebf8ff436e14ef63372b012bc"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/transportProperties",
+   "bytes": 2058,
+   "sha256": "f5ce7aa1481e3c7652b24c16e07667e50c8daaa535b5c2c788f7e9f68b03db47"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/constant/turbulenceProperties",
+   "bytes": 707,
+   "sha256": "0baab4aa39e68fe04a21a5768b3c32bf1d4179f1f84b44067f9d8558f1132081"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/initial/Laser_boundary",
+   "bytes": 1340,
+   "sha256": "de8605986a8dfc1f027753f657ae69c09d2a5dfa529a14c00e7e5009708dc301"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/initial/T",
+   "bytes": 1233,
+   "sha256": "5512b73c789cfca475adb9c6bfc6e0f47e8093d99073bcd794b5f252e3490e63"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/initial/U",
+   "bytes": 1411,
+   "sha256": "53459cbec8f5f53bad5d5170820ae9238fb0ab883a351e5e73732881edbd9c13"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/initial/alpha.metal",
+   "bytes": 1418,
+   "sha256": "7a41306d317d68e3fe479a0fe5f8adc27b66705252f70c4c064f74c8cdac3da7"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/initial/p_rgh",
+   "bytes": 1599,
+   "sha256": "7ee371e13effc3c2bb01eba46dff4e54dfc20926ed7e9489495d6d3ec72d6596"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/system/blockMeshDict",
+   "bytes": 1725,
+   "sha256": "73a76d08c2581303b75b4029d590dc39be0ffb6ac3663ac2e906d8f22cac2520"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/system/controlDict",
+   "bytes": 1344,
+   "sha256": "e05431be1fc76f461982c58ab945f7086ec4db2888d4e4be14cd236a2420ce8c"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/system/decomposeParDict",
+   "bytes": 1179,
+   "sha256": "a997334d25e0ea293c69ee4e261c52be9efa6aa175be8763055bbb031074dadb"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/system/fvSchemes",
+   "bytes": 1293,
+   "sha256": "bc9603132c27e48553db8f1bfc23b73bcaee89cda185843a175b8bc6db19e70c"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/system/fvSolution",
+   "bytes": 2212,
+   "sha256": "b4e2690ad8abfc920e259318f7aff974639b3c104a9c913c4c85613e58f101f9"
+  },
+  {
+   "path": "reference/fiveLasersOnSubstrate/system/setFieldsDict",
+   "bytes": 2023,
+   "sha256": "bfab15e74e8aa5fe3845b5506e0447088d08bc72fb9c6e99f0116972fe7b23d5"
+  }
+ ]
+}
