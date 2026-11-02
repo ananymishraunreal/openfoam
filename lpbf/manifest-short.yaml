@@ -1,0 +1,26 @@
+apiVersion: sluice/v1alpha1
+name: lpbf-short
+case:
+  path: ./.foam-runs/short-case-input
+mesh:
+  strategy: custom
+  commands:
+    - if [ ! -d 0 ]; then cp -r initial 0; fi
+    - blockMesh
+    - setSolidFraction -subDivisions 6
+    - transformPoints -rotate '((0 1 0) (0 0 1))'
+resources:
+  partition: all
+  nodes: 1
+  tasksPerNode: 6
+  timeLimitMinutes: 10
+solver:
+  name: laserbeamFoam
+runtime:
+  foamBashrc: /home/anany/shared_anany/lpbf/foam-env.sh
+  threadsPerRank: 1
+  mpi:
+    launcher: mpirun
+storage:
+  cacheDir: ./.foam-cache-short
+  runDir: ./.foam-runs-short

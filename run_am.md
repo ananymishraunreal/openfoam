@@ -103,36 +103,33 @@ staged run copy, not the pinned source case. Do not add cleanup commands.
 
 ## 5. Produce a short run with processor folders and logs
 
-Make a separate short-run case copy so the normal project inputs and full
-simulation end times remain untouched. This example writes a few time steps
-and lets Sluice retain the generated `processor*` directories and logs:
+The checked-in `manifest-short.yaml` files request a brief run and keep run
+data under `.foam-runs-short/`. Make an input copy inside Sluice's ignored
+run-state directory so the regular case and full simulation end times stay
+untouched:
 
 ```bash
-cp -a lpbf/case lpbf/case-short
-cp -a wlam/case wlam/case-short
+mkdir -p lpbf/.foam-runs wlam/.foam-runs
+cp -a lpbf/case lpbf/.foam-runs/short-case-input
+cp -a wlam/case wlam/.foam-runs/short-case-input
 source lpbf/foam-env.sh
-foamDictionary -entry endTime -set 2e-7 lpbf/case-short/system/controlDict
-foamDictionary -entry writeInterval -set 1e-7 lpbf/case-short/system/controlDict
+foamDictionary -entry endTime -set 2e-7 lpbf/.foam-runs/short-case-input/system/controlDict
+foamDictionary -entry writeInterval -set 1e-7 lpbf/.foam-runs/short-case-input/system/controlDict
+foamDictionary -entry numberOfSubdomains -set 6 lpbf/.foam-runs/short-case-input/system/decomposeParDict
+foamDictionary -entry simpleCoeffs.n -set '(3 2 1)' lpbf/.foam-runs/short-case-input/system/decomposeParDict
 source wlam/foam-env.sh
-foamDictionary -entry endTime -set 5e-7 wlam/case-short/system/controlDict
-foamDictionary -entry writeInterval -set 2e-7 wlam/case-short/system/controlDict
+foamDictionary -entry endTime -set 5e-7 wlam/.foam-runs/short-case-input/system/controlDict
+foamDictionary -entry writeInterval -set 2e-7 wlam/.foam-runs/short-case-input/system/controlDict
 ```
 
-Copy each manifest to a short-run manifest and change only `case.path` to the
-corresponding `case-short` directory. For example:
+The short LPBF manifest uses 6 ranks and matching `simpleCoeffs (3 2 1)`,
+which fits this host's six physical cores when Slurm is configured with
+`--hint=nomultithread`; adjust both if the target node differs. Submit without
+waiting for each job:
 
 ```bash
-cp lpbf/manifest.yaml lpbf/manifest-short.yaml
-cp wlam/manifest.yaml wlam/manifest-short.yaml
-```
-
-In `manifest-short.yaml`, set `case.path: ./case-short`. Use a separate
-`storage.runDir` such as `./.foam-runs-short` if you want to keep short-run
-outputs separate. Then submit without waiting for the job:
-
-```bash
-sluice run --manifest lpbf/manifest-short.yaml --no-watch
-sluice run --manifest wlam/manifest-short.yaml --no-watch
+sluice run --manifest "$PWD/lpbf/manifest-short.yaml" --backend cli --no-watch
+sluice run --manifest "$PWD/wlam/manifest-short.yaml" --backend cli --no-watch
 ```
 
 The retained per-run directory under `.foam-runs-short/` contains the staged
